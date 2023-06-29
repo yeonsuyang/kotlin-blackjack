@@ -24,7 +24,7 @@ data class Player(val name: String, val cards: Cards = Cards()) {
         isTurnFinished = true
     }
 
-    fun canProceedTurn() = score() <= BlackJack.BLACKJACK_MAX_SCORE && !isTurnFinished
+    fun canProceedTurn() = !isTurnFinished && score() <= BlackJack.BLACKJACK_MAX_SCORE
 
     companion object {
         private const val NAME_EXCEPTION = "이름을 정확하게 입력해주십시오"
