@@ -3,7 +3,7 @@ package blackjack.domain
 class BlackJack(
     val players: List<Player>,
     val dealer: Dealer = Dealer(),
-    private val gameCards: GameCards = GameCards(),
+    private val gameCards: GameCards,
 ) {
     fun distributeInitialCard() {
         dealer.addCards(drawInitCards())
@@ -23,7 +23,7 @@ class BlackJack(
     }
 
     fun getNowPlayer(): Player {
-        return players.firstOrNull { it.canProceedTurn() } ?: throw RuntimeException(PLAYER_NONE_EXCEPTION)
+        return players.firstOrNull { it.canProceedTurn() } ?: throw IllegalStateException(PLAYER_NONE_EXCEPTION)
     }
 
     fun playGameTurn(isPlaying: Boolean) {
