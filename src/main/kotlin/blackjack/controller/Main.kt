@@ -6,6 +6,8 @@ import blackjack.view.ResultView
 
 fun main() {
     val game = BlackJack(InputView.getNames())
+    val bettingPlayers = game.players.forEach { it.bet(InputView.getBettingAmount(it)) }
+
     game.distributeInitialCard()
     ResultView.printFirstCards(game)
 

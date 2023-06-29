@@ -11,4 +11,8 @@ class Player(name: String, cards: Cards = Cards()) : Participant(name, cards) {
     }
 
     fun canProceedTurn() = !isTurnFinished && score() <= BlackJack.BLACKJACK_MAX_SCORE
+
+    fun bet(bettingAmount: Int) {
+
+    }
 }
