@@ -3,7 +3,7 @@ package blackjack.domain
 class BlackJack(
     val players: List<Player>,
     val dealer: Dealer = Dealer(),
-    private val gameCards: GameCards,
+    private val gameCards: GameCards = GameCards(),
 ) {
     fun distributeInitialCard() {
         dealer.addCards(drawInitCards())
@@ -42,7 +42,7 @@ class BlackJack(
     }
 
     fun getResult(): Ranks {
-        return Ranks(players.associateWith { PlayerRank.of(it.score(), dealer.score()) })
+        return Ranks(players.associateWith { Rank.of(it.score(), dealer.score()) })
     }
 
     companion object {

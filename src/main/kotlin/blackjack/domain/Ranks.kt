@@ -1,12 +1,10 @@
 package blackjack.domain
 
 @JvmInline
-value class Ranks(val values: Map<Player, PlayerRank>) {
-    fun getDealerWonCounts(): Int {
-        return values.count { it.value == PlayerRank.LOST }
+value class Ranks(val values: Map<Participant, Rank>) {
+    fun getDealerRankCounts(): Map<Rank, Int> {
+        return getDealerRanks().sortedBy { it.order }.groupingBy { it }.eachCount()
     }
 
-    fun getDealerLostCounts(): Int {
-        return values.count { it.value == PlayerRank.WON }
-    }
+    private fun getDealerRanks(): List<Rank> = Rank.reverse(values.values.toList())
 }
