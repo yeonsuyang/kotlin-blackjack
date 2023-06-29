@@ -1,5 +1,7 @@
 package blackjack.domain
 
+import blackjack.domain.participant.Participant
+
 @JvmInline
 value class Ranks(val values: Map<Participant, Rank>) {
     fun getDealerRankCounts(): Map<Rank, Int> {

@@ -1,4 +1,4 @@
-package blackjack.domain
+package blackjack.domain.card
 
 object GameCardGenerator {
     fun crete(): MutableList<Card> = getAllCards().shuffled().toMutableList()
