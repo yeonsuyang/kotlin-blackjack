@@ -1,6 +1,6 @@
 package blackjack.controller
 
-import blackjack.domain.BlackJack
+import blackjack.domain.game.BlackJack
 import blackjack.view.InputView
 import blackjack.view.ResultView
 

@@ -1,10 +1,10 @@
 package blackjack.view
 
-import blackjack.domain.BlackJack
+import blackjack.domain.game.BlackJack
 import blackjack.domain.card.Cards
 import blackjack.domain.participant.Dealer
 import blackjack.domain.participant.Player
-import blackjack.domain.Ranks
+import blackjack.domain.game.Ranks
 
 object ResultView {
 

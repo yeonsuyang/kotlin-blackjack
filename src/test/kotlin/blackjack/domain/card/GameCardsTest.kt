@@ -1,10 +1,5 @@
-package blackjack.domain
+package blackjack.domain.card
 
-import blackjack.domain.card.Card
-import blackjack.domain.card.Character
-import blackjack.domain.card.GameCardGenerator
-import blackjack.domain.card.GameCards
-import blackjack.domain.card.Shape
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test

@@ -1,6 +1,6 @@
 package blackjack.domain.card
 
-import blackjack.domain.BlackJack
+import blackjack.domain.game.BlackJack
 
 @JvmInline
 value class Cards(val values: MutableList<Card> = mutableListOf()) {

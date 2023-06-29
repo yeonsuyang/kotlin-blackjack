@@ -1,4 +1,4 @@
-package blackjack.domain
+package blackjack.domain.game
 
 enum class Rank(val value: String, val order: Int) {
     WON("승", 1),
